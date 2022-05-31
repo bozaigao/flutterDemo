@@ -1,0 +1,42 @@
+buildscript {
+    ext.kotlin_version = '1.6.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+<<<<<<< HEAD
+task clean(type: Delete) {
+    delete rootProject.buildDir
+=======
+dependencies {
+    api 'androidx.appcompat:appcompat:1.1.0'
+    // // Google firebase cloud messaging
+    // implementation 'com.google.android.gms:play-services-base:11.4.0'
+    // implementation 'com.google.firebase:firebase-messaging:11.4.0'
+//    implementation 'io.hyphenate:hyphenate-chat:3.8.3.2'
+    implementation 'io.hyphenate:hyphenate-chat:3.9.0'
+    implementation (name:'oppo_push_v2.1.0',ext:'aar')
+>>>>>>> d167ebd5853f259686ce60cfff0080d2b15560b5
+}
