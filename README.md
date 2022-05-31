@@ -3,4 +3,4 @@
 ![](./img2.jpg)
 ![](./img1.jpg)
 
-[RN项目地址：](https://github.com/bozaigao/RNNewArchitectureApp/tree/android/turbomodule_vs_jsbridge)
+[RN项目地址](https://github.com/bozaigao/RNNewArchitectureApp/tree/android/turbomodule_vs_jsbridge)
